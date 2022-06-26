@@ -2,29 +2,25 @@ import React from "react";
 import {
   Switch, Route,
 } from "react-router-dom";
+import 'bootstrap/dist/css/bootstrap.min.css';
+import bootstrap from 'bootstrap'
+
 import NotFound from "./NotFound";
+import Login from "./Login";
 
 export default function App() {
-  return (<div>
+  return (
     <Switch>
       <Route path="/login">
         <Login/>
       </Route>
       <Route exact path="/">
-        <Slash/>
+        <Login/>
       </Route>
       <Route path="*">
         <NotFound/>
       </Route>
     </Switch>
-  </div>);
-}
-
-function Login() {
-  return <h2>Login</h2>;
-}
-
-function Slash() {
-  return <h2>Slash</h2>;
+  );
 }
 
