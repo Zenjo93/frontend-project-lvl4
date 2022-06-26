@@ -2,6 +2,7 @@ import React from "react";
 import {
   Switch, Route,
 } from "react-router-dom";
+import NotFound from "./NotFound";
 
 export default function App() {
   return (<div>
@@ -13,7 +14,7 @@ export default function App() {
         <Slash/>
       </Route>
       <Route path="*">
-        <None/>
+        <NotFound/>
       </Route>
     </Switch>
   </div>);
@@ -25,9 +26,5 @@ function Login() {
 
 function Slash() {
   return <h2>Slash</h2>;
-}
-
-function None() {
-  return <h2>404</h2>
 }
 
